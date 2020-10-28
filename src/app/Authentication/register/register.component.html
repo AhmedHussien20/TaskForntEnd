@@ -1,0 +1,37 @@
+<div class="container-form">
+    <form [formGroup]="registForm">
+        <p-card class="child">
+            <p-header>
+                <span class="regist-header">Sign Up!</span>
+                
+            </p-header>
+            <div class="p-fluid p-formgrid p-grid">
+                <div class="p-field p-col">
+            <label for="username">User Name</label>
+            <input id="username" type="text" formControlName="userName"  pInputText>
+        </div>
+    
+         <div class="p-field p-col">
+            <label for="password">Password</label>
+            <input id="password" type="text" formControlName="password"  pInputText>
+        </div>
+         <div class="p-field p-col">
+            <label for="cpass">Confirm Password</label>
+            <input id="cpass" type="text" formControlName="cpassword"  pInputText>
+        </div>
+        <div class="p-field p-col">
+            <label for="mobile">Mobile</label>
+            <input id="mobile" type="text" formControlName="mobileNo"  pInputText>
+        </div>
+         <div class="p-field p-col">
+            <label for="email">Email</label>
+            <input id="email" type="text" formControlName="email"  pInputText>
+        </div>
+    </div>
+        <p-footer>
+            <p-button (click)="submitForm()" label="Submit" icon="pi pi-check"></p-button>
+            <p-button [routerLink]="['../login']" label="Login" styleClass="p-button-link"></p-button>
+        </p-footer>
+    </p-card>
+    </form>
+</div>
